@@ -1,7 +1,12 @@
+import streamlit as st
 from datetime import datetime
 
 deadline = "01-15-2026"
 deadline_date = datetime.strptime(deadline, "%m-%d-%Y")
-print("Days left:")
-days_left = deadline_date - datetime.today()
-print(days_left)
+
+# Calculate days left
+today = datetime.today()
+days_left = (deadline_date - today).days
+
+st.title("⏳ Days Left Until Deadline")
+st.subheader(f"{days_left} days left")
