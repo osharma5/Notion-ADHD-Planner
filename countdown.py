@@ -8,5 +8,5 @@ deadline_date = datetime.strptime(deadline, "%m-%d-%Y")
 today = datetime.today()
 days_left = (deadline_date - today).days
 
-st.title("⏳ Days Left Until Deadline")
-st.subheader(f"{days_left} days left")
+st.title(f"{days_left} more days until it happens!")
+
